@@ -7,12 +7,21 @@
 
 :root {
   /* Primary */
+  /* button background color & thank you selected text */
   --orange: hsl(25, 97%, 53%);
   /* Neutral */
+  /* h1 and button text color */
   --white: hsl(0, 0%, 100%);
+  /* p text color */
   --light-grey: hsl(217, 12%, 63%);
+  /* Star and Numbers Cirles and thank you selected Background Color */
   --medium-grey: hsl(216, 12%, 54%);
+  /* Color Taken From Design Image */
+  /* Star and Numbers Cirles and thank you selected Background Color */
+  --mg: rgb(40, 57, 68);
+  /* Card Background Color */
   --dark-blue: hsl(213, 19%, 18%);
+  /* Background */
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
@@ -22,6 +31,70 @@
 body {
   font-size: 15px;
   font-family: 'Overpass', sans-serif, monospace; 
+  /* background-color: var(--very-dark-blue); */
+}
+
+h1 {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+
+p {
+  color: var(--light-grey)
+}
+
+.ratingsCard {
+  background-color: var(--dark-blue);
+  width: 359px;
+  margin: auto;
+  border-radius: 15px;
+
+  /* remove and center div vertically */
+  margin-top: 9rem;
+}
+
+.ratingsWrapper {
+  padding: 2rem;
+  padding-bottom: 2.6rem;
+}
+
+.aGoldStar img {
+  border-radius: 50%;
+  padding: .8rem;
+  margin-bottom: 1rem;
+  background-color: var(--mg);
+}
+
+.mainGraph {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.3rem;
+}
+
+.ratingsCard ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: .6rem;
+  padding-bottom: 1.8rem;
+}
+
+.ratingsCard ul li {
+  font-family: monospace;
+  border-radius: 50%;
+  padding: .8rem 1.1rem .8rem;
+  background-color: var(--mg);
+  color: var(--light-grey)
+}
+
+button {
+  border: none;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  width: 100%;
+  border-radius: 25px;
+  padding: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .hiddenCard {
