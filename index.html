@@ -17,7 +17,7 @@
 </head>
 <body>
   <!-- Rating state start -->
-  <div class="ratingsCard">
+  <div class="ratingsCard hiddenCard" id="periodUhh">
     <div class="ratingsWrapper">
       <div class="aGoldStar">
         <img src="assets/images/icon-star.svg" alt="A simple gold star">
@@ -25,30 +25,33 @@
       <h1>How did we do?</h1>
       <p class="mainGraph">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li><a href="#" onclick="selectionVar(1)">1</a></li>
+        <li><a href="#" onclick="selectionVar(2)">2</a></li>
+        <li><a href="#" onclick="selectionVar(3)">3</a></li>
+        <li><a href="#" onclick="selectionVar(4)">4</a></li>
+        <li><a href="#" onclick="selectionVar(5)">5</a></li>
       </ul>
-      <button>SUBMIT</button>
+      <button onclick="submitBtn()">SUBMIT</button>
     </div>
   </div>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-  <div class="thankYouCard hiddenCard">
-    <img src="assets/images/illustration-thank-you.svg" alt="">
-    <p>You selected <span>3</span> out of 5</p>
-    <h1>Thank You!</h1>
-    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
-      don't hesitate to get in touch!</p>
+  <div class="thankYouCard" id="periodAhh">
+    <div class="ratingsWrapper">
+      <img src="assets/images/illustration-thank-you.svg" alt="I don't know why this image says anything about thank you, but here it is.">
+      <p class="selectedGraph">You selected <span id="selectedNum">11</span> out of 5</p>
+      <h1>Thank You!</h1>
+      <p class="thankYouGraph">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don't hesitate to get in touch!</p>
+    </div>
   </div><!-- Thank you state end -->
 
-  <div class="attribution hiddenCard">
+  <div class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Steven Noyes</a>.</p>
   </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

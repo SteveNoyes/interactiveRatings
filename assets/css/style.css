@@ -28,10 +28,17 @@
 /* - Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 - Weights: 400, 700 */
 
+/* General Styles */
+
 body {
   font-size: 15px;
   font-family: 'Overpass', sans-serif, monospace; 
-  /* background-color: var(--very-dark-blue); */
+  font-weight: 400;
+  background-color: var(--very-dark-blue);
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -43,14 +50,13 @@ p {
   color: var(--light-grey)
 }
 
+/* Ratings Card */
+
 .ratingsCard {
   background-color: var(--dark-blue);
   width: 359px;
   margin: auto;
   border-radius: 15px;
-
-  /* remove and center div vertically */
-  margin-top: 9rem;
 }
 
 .ratingsWrapper {
@@ -66,7 +72,7 @@ p {
 }
 
 .mainGraph {
-  padding-top: 1rem;
+  padding-top: 1.2rem;
   padding-bottom: 1rem;
   line-height: 1.3rem;
 }
@@ -74,16 +80,28 @@ p {
 .ratingsCard ul {
   display: flex;
   justify-content: space-between;
-  padding-top: .6rem;
-  padding-bottom: 1.8rem;
+  padding-top: 2rem;
+  padding-bottom: 2.6rem;
 }
 
-.ratingsCard ul li {
+.ratingsCard ul li a {
   font-family: monospace;
+  font-weight: 700;
   border-radius: 50%;
   padding: .8rem 1.1rem .8rem;
   background-color: var(--mg);
-  color: var(--light-grey)
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+.ratingsCard ul li a:hover {
+  background-color: var(--orange)!important;
+  color: var(--white);
+}
+
+.ratingsCard ul li a:focus {
+  color: var(--white);
+  background-color: var(--light-grey);
 }
 
 button {
@@ -93,10 +111,40 @@ button {
   font-weight: 700;
   width: 100%;
   border-radius: 25px;
-  padding: 1.2rem;
-  letter-spacing: 1px;
+  padding: 1rem;
+  letter-spacing: 2px;
 }
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* Thank You Card */
 
 .hiddenCard {
   display: none;
 }
+
+.thankYouCard {
+  background-color: var(--dark-blue);
+  width: 359px;
+  margin: auto;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.selectedGraph {
+  width: 53%;
+  margin: 1.4rem auto;
+  color: var(--orange);
+  background-color: var(--mg);
+  padding: .7rem .5rem .5rem .5rem;
+  border-radius: 25px;
+} 
+
+.thankYouGraph {
+  padding-top: 1rem;
+  line-height: 1.3rem;
+} 
